@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<title>Documentation for Ploigos&#160; (PL)</title>
+<title>Documentation for Ploigos</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -438,57 +438,42 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Documentation for Ploigos&#160; (PL)</h1>
+<h1>Documentation for Ploigos</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#ploigos">1. Ploigos&#160; - Opinionated Workflow</a>
-<ul class="sectlevel3">
-<li><a href="#ploigos-workflow-abstracted-high-level">1.1. High Level</a></li>
-<li><a href="#ploigos-workflow-abstracted-detailed">1.2. Detailed</a></li>
-<li><a href="#_source">1.3. Source</a></li>
-<li><a href="#_predefined_processes">1.4. Predefined Processes</a></li>
-<li><a href="#ploigos-workflow-components-detailed-level-assembly-ploigos">1.5. Steps</a></li>
-<li><a href="#ploigos-workflow-tools">1.6. Ploigos&#160; Workflow Tools</a>
-<ul class="sectlevel3">
-<li><a href="#ploigos-workflow-tool-purposes-assembly-ploigos">1.6.1. Tool Categories and Purposes</a></li>
-<li><a href="#ploigos-workflow-tool-implementers-assembly-ploigos">1.6.2. Component Implementers</a></li>
-</ul>
-</li>
-<li><a href="#ploigos-workflow-infrastructure">1.7. Ploigos&#160;  - Infrastructure Requirements</a>
-<ul class="sectlevel3">
-<li><a href="#_sizing">1.7.1. Sizing</a></li>
-</ul>
-</li>
-<li><a href="#ploigos-reference-impl">1.8. Ploigos&#160;  - Reference Implementation</a></li>
-<li><a href="#ploigos-workflow-reference-ops">1.9. Ploigos&#160;  - Operating the Reference Implementation</a></li>
-<li><a href="#ploigos-workflow-terms">1.10. Ploigos&#160; Terms and Definitions</a></li>
-</ul>
-</li>
-<li><a href="#ploigos">2. Ploigos&#160; - Deploy using existing infrastructure</a>
+<li><a href="#ploigos">1. Ploigos - Opinionated Workflow</a>
 <ul class="sectlevel2">
-<li><a href="#ploigos-deploy-changes">2.1. Ploigos&#160;  - Changing the default workflow</a></li>
-<li><a href="#ploigos-deploy-opinions">2.2. Ploigos&#160;  - Adding or modifying Opinions in the workflow</a></li>
-<li><a href="#ploigos-deploy-toolselection">2.3. Ploigos&#160;  - Process for selecting a tool or service</a></li>
-<li><a href="#ploigos-deploy-predefined">2.4. Ploigos&#160;  - List of predefined workflows</a></li>
-<li><a href="#ploigos-deploy-workflowsteps">2.5. Ploigos&#160;  - Workflow Step Reference</a></li>
+<li><a href="#ploigos-workflow-abstracted-high-level">1.1. High Level Workflow</a>
+<ul class="sectlevel3">
+<li><a href="#_high_level_workflow_steps">1.1.1. High Level Workflow Steps</a></li>
 </ul>
 </li>
-<li><a href="#ploigos">3. Ploigos&#160; - Customize Workflow</a>
+<li><a href="#ploigos-workflow-abstracted-detailed">1.2. Detailed Workflow</a>
+<ul class="sectlevel3">
+<li><a href="#ploigos-workflow-components-detailed-level-assembly-ploigos">1.2.1. Detailed Workflow Steps</a></li>
+</ul>
+</li>
+<li><a href="#_workflow_source_files">1.3. Workflow Source Files</a></li>
+</ul>
+</li>
+<li><a href="#ploigos-workflow-tools">2. Ploigos Workflow Tools</a>
 <ul class="sectlevel2">
-<li><a href="#ploigos-opinions-establish">3.1. Ploigos&#160;  - Process for establishing workflow opinions</a></li>
-<li><a href="#ploigos-customize-opinions-formation">3.2. Ploigos&#160;  - Process for forming an opinions on a tool/service/step</a></li>
-<li><a href="#ploigos-customize-workflow">3.3. Ploigos&#160;  - Process for changing the workflow</a></li>
-<li><a href="#ploigos-customize-steprunner">3.4. Ploigos&#160;  - Process for adding or changing a steprunner</a></li>
-<li><a href="#ploigos-customize-container">3.5. Ploigos&#160;  - Process for adding or changing a container image</a></li>
+<li><a href="#ploigos-workflow-tool-purposes-assembly-ploigos">2.1. Tool Categories and Purposes</a></li>
+<li><a href="#ploigos-workflow-tool-implementers-assembly-ploigos">2.2. Component Implementers</a></li>
+<li><a href="#ploigos-workflow-infrastructure">2.3. Ploigos  - Infrastructure Requirements</a>
+<ul class="sectlevel3">
+<li><a href="#_sizing">2.3.1. Sizing</a></li>
 </ul>
 </li>
-<li><a href="#ploigos">4. Ploigos&#160; - Contributing</a>
-<ul class="sectlevel2">
-<li><a href="#ploigos-contribute-guide">4.1. Ploigos&#160;  - Contribution Guide</a></li>
-<li><a href="#ploigos-contribute-subprojects">4.2. Ploigos&#160;  - Reference list of Ploigos Subprojects</a></li>
+<li><a href="#ploigos-reference-impl">2.4. Ploigos  - Reference Implementation</a></li>
+<li><a href="#ploigos-workflow-reference-ops">2.5. Ploigos  - Operating the Reference Implementation</a></li>
+<li><a href="#ploigos-workflow-terms">2.6. Ploigos Terms and Definitions</a></li>
 </ul>
 </li>
+<li><a href="#ploigos">3. Ploigos - Deploy using existing infrastructure</a></li>
+<li><a href="#ploigos">4. Ploigos - Customize Workflow</a></li>
+<li><a href="#ploigos">5. Ploigos - Contributing</a></li>
 </ul>
 </div>
 </div>
@@ -496,84 +481,35 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Welcome to the documentation for the Ploigos&#160; (PL).</p>
+<p>Welcome to the documentation for Ploigos</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="ploigos"><a class="anchor" href="#ploigos"></a><a class="link" href="#ploigos">1. Ploigos&#160; - Opinionated Workflow</a></h2>
+<h2 id="ploigos"><a class="anchor" href="#ploigos"></a><a class="link" href="#ploigos">1. Ploigos - Opinionated Workflow</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>At its core the Ploigos&#160; is an opinionated workflow used to deliver software from peoples heads to production. This documentation module defines what that opinionated workflow is.</p>
+<p>At its core the Ploigos defines an opinionated workflow used to deliver software from peoples heads to production. This documentation module defines what that that opinionated workflow is.</p>
 </div>
 <div id="ploigos-workflow-abstracted" class="paragraph">
-<p>When discussing methods for getting ideas from peoples' heads to production, groups often get lost in talking about technology and tools and avoid the hard work of deciding on the abstract process, or workflow. This section has pictorial renderings of the Ploigos&#160; opinionated workflow in an abstract form, that is without any specific technologies or tools. The intent being this can be used as a primer for a team to first discuss and decide on their own specific Ploigos&#160; workflow, and then use the provided templates to draw it to avoid the <a href="https://www.jpattonassociates.com/wp-content/uploads/2018/07/glad-we-all-agree-1.png">"I&#8217;m glad we all agree"</a> problem that enviably arises if an abstract concept is not concretely defined by drawing it.</p>
+<p>When discussing methods for getting ideas from peoples' heads to production, groups often get lost in talking about technology and tools and avoid the hard work of deciding on the abstract process, or workflow. This section has pictorial renderings of the Ploigos opinionated workflow in an abstract form, without any specific technologies or tools. This can be used as a primer for a team to first discuss and decide on their own specific Ploigos workflow, and then use the provided templates to draw it to avoid the <a href="https://www.jpattonassociates.com/wp-content/uploads/2018/07/glad-we-all-agree-1.png">"I&#8217;m glad we all agree"</a> problem that enviably arises if an abstract concept is not concretely defined by drawing it.</p>
 </div>
-<div class="sect3">
-<h4 id="ploigos-workflow-abstracted-high-level"><a class="anchor" href="#ploigos-workflow-abstracted-high-level"></a><a class="link" href="#ploigos-workflow-abstracted-high-level">1.1. High Level</a></h4>
+<div class="sect2">
+<h3 id="ploigos-workflow-abstracted-high-level"><a class="anchor" href="#ploigos-workflow-abstracted-high-level"></a><a class="link" href="#ploigos-workflow-abstracted-high-level">1.1. High Level Workflow</a></h3>
 <div class="paragraph">
-<p>A high level rendering of the Ploigos&#160; workflow where the majority of steps are Predefined Procedures. That is, they are placeholders for more complex sub workflows containing multiple Procedures, the details of which are defined in <a href="#ploigos-tool-abstracted-workflow-detailed">[ploigos-tool-abstracted-workflow-detailed]</a>. If something is needed that will fit on "one slide" this is it.</p>
+<p>A high level rendering of the Ploigos workflow where the majority of steps are Predefined Procedures. That is, they are placeholders for more complex sub workflows containing multiple Procedures, the details of which are defined in <a href="#ploigos-tool-abstracted-workflow-detailed">[ploigos-tool-abstracted-workflow-detailed]</a>. If something is needed that will fit on "one slide" this is it.</p>
 </div>
 <div id="ploigos-workflow-abstracted-high-level-image" class="imageblock">
 <div class="content">
-<a class="image" href="images/Ploigos&#160;_Workflow_High_Level.png"><img src="images/Ploigos&#160;_Workflow_High_Level.png" alt="Ploigos (Ploigos&#160;) Workflow - High Level "></a>
+<a class="image" href="images/Ploigos_Workflow_High_Level.png"><img src="images/Ploigos_Workflow_High_Level.png" alt="(Ploigos) Workflow - High Level"></a>
 </div>
-<div class="title">Workflow Image: Ploigos (Ploigos&#160;) - High Level </div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="ploigos-workflow-abstracted-detailed"><a class="anchor" href="#ploigos-workflow-abstracted-detailed"></a><a class="link" href="#ploigos-workflow-abstracted-detailed">1.2. Detailed</a></h4>
-<div class="paragraph">
-<p>If there is one artifact that defines what the Ploigos&#160; is, this is it. This is the detailed opinionated workflow for delivering "ideas to production" as defined by and implemented by the Ploigos&#160;.</p>
-</div>
-<div id="ploigos-workflow-abstracted-details-image" class="paragraph">
-<p><span class="image"><a class="image" href="images/Ploigos&#160;_Workflow_Details.png"><img src="images/Ploigos&#160;_Workflow_Details.png" alt="Ploigos (Ploigos&#160;) Workflow - Details" title="Ploigos (Ploigos&#160;) - Details"></a></span></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_source"><a class="anchor" href="#_source"></a><a class="link" href="#_source">1.3. Source</a></h4>
-<div class="paragraph">
-<p>While the rendered PNGs here are useful for starting the conversation and stating clearly the opinionated Ploigos&#160; workflow, it is recognized that every implementation of the Ploigos&#160; will be different. This includes the tool abstracted workflow, as well as the specific tools used to implement it.</p>
-</div>
-<div class="paragraph">
-<p>To facilitate ease of adoption, consistency, re-use, and contribution back to the community, the workflows are all drawn in the <a href="https://jgraph.github.io/mxgraph/">MXGraph</a> format using <a href="https://draw.io/">Draw.io</a> and provided here for consumption, modification, and re-use.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Ploigos Workflows</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="images/ploigos_cworkflows.drawio">Draw.io - Compressed XML</a></p>
-</li>
-<li>
-<p><a href="images/ploigos_workflows.xml">MXGraph - XML</a></p>
-</li>
-<li>
-<p>Contains</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Ploigos (Ploigos&#160;) Workflow - High Level</p>
-</li>
-<li>
-<p>Ploigos (Ploigos&#160;) Workflow - Details - Tool Agnostic</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
+<div class="title">Workflow Image: (Ploigos) - High Level </div>
 </div>
 <div id="ploigos-workflow-components-high-level-assembly-ploigos" class="paragraph">
-<p>The Ploigos&#160; Workflow Components are the high level groupings of more complex sub workflows. The following table defines the purpose of these high-level components without emphasis on the more detailed steps each component encapsulates, or the technology of how those get realized.</p>
-</div>
+<p>The Ploigos Workflow Components are the high level groupings of more complex sub workflows. The following table defines the purpose of these high-level components without emphasis on the more detailed steps each component encapsulates, or the technology of how those get realized.</p>
 </div>
 <div class="sect3">
-<h4 id="_predefined_processes"><a class="anchor" href="#_predefined_processes"></a><a class="link" href="#_predefined_processes">1.4. Predefined Processes</a></h4>
+<h4 id="_high_level_workflow_steps"><a class="anchor" href="#_high_level_workflow_steps"></a><a class="link" href="#_high_level_workflow_steps">1.1.1. High Level Workflow Steps</a></h4>
 <div class="paragraph">
 <p>Each predefined process represents an encapsulation of steps that are typically necessary in a complete end-to-end pipeline</p>
 </div>
@@ -824,11 +760,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="ploigos-workflow-components-detailed-level-assembly-ploigos"><a class="anchor" href="#ploigos-workflow-components-detailed-level-assembly-ploigos"></a><a class="link" href="#ploigos-workflow-components-detailed-level-assembly-ploigos">1.5. Steps</a></h4>
-<div class="paragraph">
-<p>The Predefined Processes are further broken down into discrete units of work.</p>
 </div>
+<div class="sect2">
+<h3 id="ploigos-workflow-abstracted-detailed"><a class="anchor" href="#ploigos-workflow-abstracted-detailed"></a><a class="link" href="#ploigos-workflow-abstracted-detailed">1.2. Detailed Workflow</a></h3>
+<div class="paragraph">
+<p>This is the detailed opinionated workflow for delivering "ideas to production" as defined by and implemented by the Ploigos. If there is one artifact that defines what the Ploigos is, this is it. This workflow follows the High Level workflow above, but breaks down individual steps that represent discrete unites of work.</p>
+</div>
+<div id="ploigos-workflow-abstracted-details-image" class="paragraph">
+<p><span class="image"><a class="image" href="images/Ploigos_Workflow_Details.png"><img src="images/Ploigos_Workflow_Details.png" alt="(Ploigos) Workflow - Details" title="(Ploigos) - Details"></a></span></p>
+</div>
+<div class="sect3">
+<h4 id="ploigos-workflow-components-detailed-level-assembly-ploigos"><a class="anchor" href="#ploigos-workflow-components-detailed-level-assembly-ploigos"></a><a class="link" href="#ploigos-workflow-components-detailed-level-assembly-ploigos">1.2.1. Detailed Workflow Steps</a></h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -971,7 +913,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Static Code Analysis</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The pipeline will perform static analysis on source code to catch defects, vulnerabilities, programatic and stylistic problems as early in the development lifecycle as possible, prior to deploying and running the code.</p>
+<p>The pipeline will perform static analysis on source code to catch defects, vulnerabilities, programmatic and stylistic problems as early in the development lifecycle as possible, prior to deploying and running the code.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
@@ -1202,7 +1144,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Live Development and Testing in MR#-DEV Environment</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Code changes made inside the developer&#8217;s IDE should automatically be moved to a live environment quickly and with minimal friction. The development tooling should fascilitate iterating and deploying new versions of the code, as well as testing.</p>
+<p>Code changes made inside the developer&#8217;s IDE should automatically be moved to a live environment quickly and with minimal friction. The development tooling should facilitate iterating and deploying new versions of the code, as well as testing.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
@@ -1232,7 +1174,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Peer Review</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Collaborate with teamates on code change to ensure the quality and completeness of the solution.</p>
+<p>Collaborate with teammates on code change to ensure the quality and completeness of the solution.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
@@ -1440,18 +1382,62 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tbody>
 </table>
 </div>
+</div>
 <div class="sect2">
-<h3 id="ploigos-workflow-tools"><a class="anchor" href="#ploigos-workflow-tools"></a><a class="link" href="#ploigos-workflow-tools">1.6. Ploigos&#160; Workflow Tools</a></h3>
+<h3 id="_workflow_source_files"><a class="anchor" href="#_workflow_source_files"></a><a class="link" href="#_workflow_source_files">1.3. Workflow Source Files</a></h3>
+<div class="paragraph">
+<p>While the rendered PNGs here are useful for starting the conversation and stating clearly the opinionated Ploigos workflow, it is recognized that every implementation of the Ploigos will be different. This includes the tool abstracted workflow, as well as the specific tools used to implement it.</p>
+</div>
+<div class="paragraph">
+<p>To facilitate ease of adoption, consistency, re-use, and contribution back to the community, the workflows are all drawn in the <a href="https://jgraph.github.io/mxgraph/">MXGraph</a> format using <a href="https://draw.io/">Draw.io</a> and provided here for consumption, modification, and re-use.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ploigos Workflows</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="images/ploigos_workflows.drawio">Draw.io - Compressed XML</a></p>
+</li>
+<li>
+<p><a href="images/ploigos_workflows.xml">MXGraph - XML</a></p>
+</li>
+<li>
+<p>Contains</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Ploigos (Ploigos) Workflow - High Level</p>
+</li>
+<li>
+<p>Ploigos (Ploigos) Workflow - Details - Tool Agnostic
+:leveloffset: +1</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ploigos-workflow-tools"><a class="anchor" href="#ploigos-workflow-tools"></a><a class="link" href="#ploigos-workflow-tools">2. Ploigos Workflow Tools</a></h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Once a <a href="#ploigos-workflow-assembly-ploigos">[ploigos-workflow-assembly-ploigos]</a> is decided upon, then the next task is to determine all of the types of components needed to implement the workflow, and then finally, the actual component implementers (aka, specific technology implementations and tools). This section contains both the component types and their purposes as well as opinions on which actual component implementations to use to fullfil the required components needs.</p>
 </div>
-<div class="sect3">
-<h4 id="ploigos-workflow-tool-purposes-assembly-ploigos"><a class="anchor" href="#ploigos-workflow-tool-purposes-assembly-ploigos"></a><a class="link" href="#ploigos-workflow-tool-purposes-assembly-ploigos">1.6.1. Tool Categories and Purposes</a></h4>
+<div class="sect2">
+<h3 id="ploigos-workflow-tool-purposes-assembly-ploigos"><a class="anchor" href="#ploigos-workflow-tool-purposes-assembly-ploigos"></a><a class="link" href="#ploigos-workflow-tool-purposes-assembly-ploigos">2.1. Tool Categories and Purposes</a></h3>
 <div class="paragraph">
-<p>This section describes the components needed to implement Ploigos&#160; and their purpose in doing so.</p>
+<p>This section describes the components needed to implement Ploigos and their purpose in doing so.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Ploigos&#160; Required Components Overview</caption>
+<caption class="title">Table 1. Ploigos Required Components Overview</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1666,13 +1652,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="ploigos-workflow-tool-implementers-assembly-ploigos"><a class="anchor" href="#ploigos-workflow-tool-implementers-assembly-ploigos"></a><a class="link" href="#ploigos-workflow-tool-implementers-assembly-ploigos">1.6.2. Component Implementers</a></h4>
+<div class="sect2">
+<h3 id="ploigos-workflow-tool-implementers-assembly-ploigos"><a class="anchor" href="#ploigos-workflow-tool-implementers-assembly-ploigos"></a><a class="link" href="#ploigos-workflow-tool-implementers-assembly-ploigos">2.2. Component Implementers</a></h3>
 <div class="paragraph">
 <p><mark>TODO</mark></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 2. Ploigos&#160; Component Implementers</caption>
+<caption class="title">Table 2. Ploigos Component Implementers</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -1915,14 +1901,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tbody>
 </table>
 </div>
-</div>
 <div class="sect2">
-<h3 id="ploigos-workflow-infrastructure"><a class="anchor" href="#ploigos-workflow-infrastructure"></a><a class="link" href="#ploigos-workflow-infrastructure">1.7. Ploigos&#160;  - Infrastructure Requirements</a></h3>
+<h3 id="ploigos-workflow-infrastructure"><a class="anchor" href="#ploigos-workflow-infrastructure"></a><a class="link" href="#ploigos-workflow-infrastructure">2.3. Ploigos  - Infrastructure Requirements</a></h3>
 <div class="paragraph">
 <p>Reference information on the infrastructure used to develop and test the MVP of the <a href="#ploigos-workflow-assembly-ploigos-workflow">[ploigos-workflow-assembly-ploigos-workflow]</a>.</p>
 </div>
 <div class="sect3">
-<h4 id="_sizing"><a class="anchor" href="#_sizing"></a><a class="link" href="#_sizing">1.7.1. Sizing</a></h4>
+<h4 id="_sizing"><a class="anchor" href="#_sizing"></a><a class="link" href="#_sizing">2.3.1. Sizing</a></h4>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 3. Containerized Tool Sizing</caption>
 <colgroup>
@@ -2263,19 +2248,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="ploigos-reference-impl"><a class="anchor" href="#ploigos-reference-impl"></a><a class="link" href="#ploigos-reference-impl">1.8. Ploigos&#160;  - Reference Implementation</a></h3>
+<h3 id="ploigos-reference-impl"><a class="anchor" href="#ploigos-reference-impl"></a><a class="link" href="#ploigos-reference-impl">2.4. Ploigos  - Reference Implementation</a></h3>
 <div class="paragraph">
 <p>TODO</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="ploigos-workflow-reference-ops"><a class="anchor" href="#ploigos-workflow-reference-ops"></a><a class="link" href="#ploigos-workflow-reference-ops">1.9. Ploigos&#160;  - Operating the Reference Implementation</a></h3>
+<h3 id="ploigos-workflow-reference-ops"><a class="anchor" href="#ploigos-workflow-reference-ops"></a><a class="link" href="#ploigos-workflow-reference-ops">2.5. Ploigos  - Operating the Reference Implementation</a></h3>
 <div class="paragraph">
 <p>TODO</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="ploigos-workflow-terms"><a class="anchor" href="#ploigos-workflow-terms"></a><a class="link" href="#ploigos-workflow-terms">1.10. Ploigos&#160; Terms and Definitions</a></h3>
+<h3 id="ploigos-workflow-terms"><a class="anchor" href="#ploigos-workflow-terms"></a><a class="link" href="#ploigos-workflow-terms">2.6. Ploigos Terms and Definitions</a></h3>
 <div class="paragraph">
 <p>TODO</p>
 </div>
@@ -2283,88 +2268,35 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="ploigos"><a class="anchor" href="#ploigos"></a><a class="link" href="#ploigos">2. Ploigos&#160; - Deploy using existing infrastructure</a></h2>
+<h2 id="ploigos"><a class="anchor" href="#ploigos"></a><a class="link" href="#ploigos">3. Ploigos - Deploy using existing infrastructure</a></h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="ploigos-deploy-changes"><a class="anchor" href="#ploigos-deploy-changes"></a><a class="link" href="#ploigos-deploy-changes">2.1. Ploigos&#160;  - Changing the default workflow</a></h3>
 <div class="paragraph">
-<p>TODO</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="ploigos-deploy-opinions"><a class="anchor" href="#ploigos-deploy-opinions"></a><a class="link" href="#ploigos-deploy-opinions">2.2. Ploigos&#160;  - Adding or modifying Opinions in the workflow</a></h3>
-<div class="paragraph">
-<p>TODO</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="ploigos-deploy-toolselection"><a class="anchor" href="#ploigos-deploy-toolselection"></a><a class="link" href="#ploigos-deploy-toolselection">2.3. Ploigos&#160;  - Process for selecting a tool or service</a></h3>
-<div class="paragraph">
-<p>TODO</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="ploigos-deploy-predefined"><a class="anchor" href="#ploigos-deploy-predefined"></a><a class="link" href="#ploigos-deploy-predefined">2.4. Ploigos&#160;  - List of predefined workflows</a></h3>
-<div class="paragraph">
-<p>TODO</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="ploigos-deploy-workflowsteps"><a class="anchor" href="#ploigos-deploy-workflowsteps"></a><a class="link" href="#ploigos-deploy-workflowsteps">2.5. Ploigos&#160;  - Workflow Step Reference</a></h3>
-<div class="paragraph">
-<p>TODO</p>
-</div>
+<p>Unresolved directive in docs/assembly-ploigos-deploy.adoc - include::modules/con-ploigos-deploy-changes.adoc[leveloffset=+1]
+Unresolved directive in docs/assembly-ploigos-deploy.adoc - include::modules/proc-ploigos-deploy-opinions.adoc[leveloffset=+1]
+Unresolved directive in docs/assembly-ploigos-deploy.adoc - include::modules/proc-ploigos-deploy-toolselection.adoc[leveloffset=+1]
+Unresolved directive in docs/assembly-ploigos-deploy.adoc - include::modules/ref-ploigos-deploy-predefined.adoc[leveloffset=+1]
+Unresolved directive in docs/assembly-ploigos-deploy.adoc - include::modules/ref-ploigos-deploy-workflowsteps.adoc[leveloffset=+1]</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="ploigos"><a class="anchor" href="#ploigos"></a><a class="link" href="#ploigos">3. Ploigos&#160; - Customize Workflow</a></h2>
+<h2 id="ploigos"><a class="anchor" href="#ploigos"></a><a class="link" href="#ploigos">4. Ploigos - Customize Workflow</a></h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="ploigos-opinions-establish"><a class="anchor" href="#ploigos-opinions-establish"></a><a class="link" href="#ploigos-opinions-establish">3.1. Ploigos&#160;  - Process for establishing workflow opinions</a></h3>
 <div class="paragraph">
-<p>TODO</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="ploigos-customize-opinions-formation"><a class="anchor" href="#ploigos-customize-opinions-formation"></a><a class="link" href="#ploigos-customize-opinions-formation">3.2. Ploigos&#160;  - Process for forming an opinions on a tool/service/step</a></h3>
-<div class="paragraph">
-<p>TODO</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="ploigos-customize-workflow"><a class="anchor" href="#ploigos-customize-workflow"></a><a class="link" href="#ploigos-customize-workflow">3.3. Ploigos&#160;  - Process for changing the workflow</a></h3>
-<div class="paragraph">
-<p>TODO</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="ploigos-customize-steprunner"><a class="anchor" href="#ploigos-customize-steprunner"></a><a class="link" href="#ploigos-customize-steprunner">3.4. Ploigos&#160;  - Process for adding or changing a steprunner</a></h3>
-<div class="paragraph">
-<p>TODO</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="ploigos-customize-container"><a class="anchor" href="#ploigos-customize-container"></a><a class="link" href="#ploigos-customize-container">3.5. Ploigos&#160;  - Process for adding or changing a container image</a></h3>
-<div class="paragraph">
-<p>TODO</p>
-</div>
+<p>Unresolved directive in docs/assembly-ploigos-customize.adoc - include::modules/con-ploigos-customize-opinions-establish.adoc[leveloffset=+1]
+Unresolved directive in docs/assembly-ploigos-customize.adoc - include::modules/proc-ploigos-customize-opinions-formation.adoc[leveloffset=+1]
+Unresolved directive in docs/assembly-ploigos-customize.adoc - include::modules/proc-ploigos-customize-workflow.adoc[leveloffset=+1]
+Unresolved directive in docs/assembly-ploigos-customize.adoc - include::modules/proc-ploigos-customize-steprunner.adoc[leveloffset=+1]
+Unresolved directive in docs/assembly-ploigos-customize.adoc - include::modules/proc-ploigos-customize-container.adoc[leveloffset=+1]</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="ploigos"><a class="anchor" href="#ploigos"></a><a class="link" href="#ploigos">4. Ploigos&#160; - Contributing</a></h2>
+<h2 id="ploigos"><a class="anchor" href="#ploigos"></a><a class="link" href="#ploigos">5. Ploigos - Contributing</a></h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="ploigos-contribute-guide"><a class="anchor" href="#ploigos-contribute-guide"></a><a class="link" href="#ploigos-contribute-guide">4.1. Ploigos&#160;  - Contribution Guide</a></h3>
 <div class="paragraph">
-<p>TODO</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="ploigos-contribute-subprojects"><a class="anchor" href="#ploigos-contribute-subprojects"></a><a class="link" href="#ploigos-contribute-subprojects">4.2. Ploigos&#160;  - Reference list of Ploigos Subprojects</a></h3>
-<div class="paragraph">
-<p>TODO</p>
+<p>Unresolved directive in docs/assembly-ploigos-contribute.adoc - include::modules/con-ploigos-contribute-guide.adoc[leveloffset=+1]
+Unresolved directive in docs/assembly-ploigos-contribute.adoc - include::modules/ref-ploigos-contribute-subprojects.adoc[leveloffset=+1]</p>
 </div>
 <div class="paragraph">
 <p>Unresolved directive in master.adoc - include::docs/modules/ref-ploigos-workflow-examples.adoc[leveloffset=+1]</p>
@@ -2375,10 +2307,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
-</div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-01-23 06:12:42 UTC
+Last updated 2021-01-26 23:44:17 UTC
 </div>
 </div>
 </body>

@@ -447,7 +447,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#ploigos-workflow-overview">1.1. Overview</a></li>
 <li><a href="#ploigos-workflow-idea-delivery-high-level">1.2. Idea Delivery Workflow</a>
 <ul class="sectlevel3">
-<li><a href="#_idea_delivery_workflow_steps">1.2.1. Idea Delivery Workflow Steps</a></li>
+<li><a href="#ploigos-workflow-idea-steps-assembly-ploigos">1.2.1. Idea Delivery Workflow Steps</a></li>
 </ul>
 </li>
 <li><a href="#_cicd_process_workflow">1.3. CI/CD Process Workflow</a></li>
@@ -525,32 +525,29 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Ploigos is an opinionated workflow used to transform ideas into delivered software in a production environment. Ploigos can be divided into two major components: the Idea Delivery Workflow and the CI/CD Workflow.</p>
 </div>
 <div class="paragraph">
-<p>The Idea Delivery Workflow is an abstract process workflow that defines a high level view of how an organization can best take ideas that solve business problems and implement the solution in a well defined procedure. This process focuses on the specific actions that need to take place without identifying specific tools for each step. Ploigos provides a general use Idea Delivery Workflow that can be further customized to fit specific projects as needed.</p>
+<p>The Idea Delivery Workflow is an abstract process workflow that defines a high level view of how an organization can best take ideas that solve business problems and implement the solution in a well defined procedure. This process focuses on the specific actions that need to take place without identifying specific tools for each step. Ploigos provides a general use Idea Delivery Workflow that can be further customized to fit specific projects as needed. A workflow first approach identifies the organizational behaviors and expected outcomes to define what quality is.  The workflow codifies and enforces these to ensure all aspects of security, compliance, trust, and privacy are addressed.</p>
 </div>
 <div class="paragraph">
-<p>The CI/CD Workflow is the implementation of the software development portion of the Idea Delivery Workflow. Ploigos creates a framework for a modular, extensible, and opinionated CD/CD pipeline. Modularity and extensibility are accomplished by defining one or more 'Steps' in the CD/CD workflow, and automating the <strong>Step</strong> by creating a <strong>StepImplementer</strong>. As part of fulfilling the opinionated aspect, Ploigos provides a number of pre-defined Steps, StepImplementers, and several CI/CD Workflows.</p>
+<p>The CI/CD Workflow is the implementation of the software development portion of the Idea Delivery Workflow. Ploigos creates a framework for a modular, extensible, and opinionated CD/CD pipeline. Modularity and extensibility are accomplished by defining one or more '<strong>Steps</strong>' in the CD/CD workflow, and automating the <strong>Step</strong> by creating a <strong>StepImplementer</strong>. As part of fulfilling the opinionated aspect, Ploigos provides a number of pre-defined Steps, StepImplementers, and several CI/CD Workflows.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="ploigos-workflow-idea-delivery-high-level"><a class="anchor" href="#ploigos-workflow-idea-delivery-high-level"></a><a class="link" href="#ploigos-workflow-idea-delivery-high-level">1.2. Idea Delivery Workflow</a></h3>
 <div class="paragraph">
-<p>In this high level rendering of the Ploigos workflow, the majority of steps are Predefined Procedures. That is, they are placeholders for more complex sub workflows containing multiple Procedures, the details of which are defined in <a href="#ploigos-workflow-abstracted-detailed">[ploigos-workflow-abstracted-detailed]</a>. This is a "one slide" view of the workflow.</p>
+<p>Ploigos defines a reference high level workflow that covers the process of taking the genesis of an idea, idea development, integration, and review. In this high level rendering of the Ploigos workflow, the majority of steps are <em>Predefined Procedures</em>. These procedures are placeholders for more complex sub workflows containing multiple Procedures, the details of which are defined in later sections. This simplification allows for a 'one slide' view of the workflow.</p>
 </div>
 <div id="ploigos-workflow-abstracted-high-level-image" class="imageblock">
 <div class="content">
-<img src="images/ploigos_workflows-Ploigos_Idea_Delivery_Workflow-vertical.png" alt="ploigos workflows Ploigos Idea Delivery Workflow vertical">
+<a class="image" href="images/ploigos_workflows-Ploigos_Idea_Delivery_Workflow-vertical.png"><img src="images/ploigos_workflows-Ploigos_Idea_Delivery_Workflow-vertical.png" alt="(Ploigos) Workflow - High Level"></a>
 </div>
-</div>
-<div id="ploigos-workflow-components-high-level-assembly-ploigos" class="paragraph">
-<div class="title">(Ploigos) - High Level</div>
-<p>The Ploigos Workflow Components are the high level groupings of more complex sub workflows. The following table defines the purpose of these high-level components without emphasis on the more detailed steps each component encapsulates, or the technology of how those get realized.</p>
+<div class="title">Workflow Image: (Ploigos) - High Level</div>
 </div>
 <div class="sect3">
-<h4 id="_idea_delivery_workflow_steps"><a class="anchor" href="#_idea_delivery_workflow_steps"></a><a class="link" href="#_idea_delivery_workflow_steps">1.2.1. Idea Delivery Workflow Steps</a></h4>
+<h4 id="ploigos-workflow-idea-steps-assembly-ploigos"><a class="anchor" href="#ploigos-workflow-idea-steps-assembly-ploigos"></a><a class="link" href="#ploigos-workflow-idea-steps-assembly-ploigos">1.2.1. Idea Delivery Workflow Steps</a></h4>
 <div class="paragraph">
 <p>Each predefined process represents an encapsulation of steps that are typically necessary in a complete end-to-end pipeline</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all" style="width: 80%;">
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -559,41 +556,23 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Predefined Process</th>
-<th class="tableblock halign-left valign-top">Purpose</th>
-<th class="tableblock halign-left valign-top"><a href="#ploigos-workflow-components-detailed-level-assembly-ploigos">Components / Steps</a></th>
+<th class="tableblock halign-left valign-top">Details</th>
+<th class="tableblock halign-left valign-top">Prioritize Ideas</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Prioritize Ideas</p>
+<p>New ideas are placed in a work management tool, refined, and prioritized. The work management tool allows for organization and tracking of ideas as they move through the workflow. Steps will vary based on existing organizational structure and specific tool chosen, but basic requirements involve being able to: record new ideas, backlog management, assign ideas to developers, and track progress and status.</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Move idea from person&#8217;s head into a work management tool to track item through to completion.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Steps vary based on team&#8217;s backlog prioritization and work planning process</p>
-</div></div></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Development</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Lay foundation for isolated development environment for developer to begin coding</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p><a href="#detailed-component-fork-repository">Fork Repository</a></p>
-</li>
-<li>
-<p><a href="#detailed-component-create-idea-branch">Create Idea Branch on Fork of Repository</a></p>
-</li>
-<li>
-<p><a href="#detailed-component-create-wip-merge-request">Create WIP Merge Request to Release Branch on prime repository</a></p>
-</li>
-</ul>
+<p>Lay foundation for isolated development environment for developer to begin coding
+* <a href="#detailed-component-fork-repository">Fork Repository</a>
+* <a href="#detailed-component-create-idea-branch">Create Idea Branch on Fork of Repository</a>
+* <a href="#detailed-component-create-wip-merge-request">Create WIP Merge Request to Release Branch on prime repository</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -601,140 +580,48 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Create or update Merge Request to Release Branch</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Deployment of build artifacts into a temporary development environment that will occur when a merge request is created (from a feature branch to the primary release branch), and for any subsequent changes to the merging feature branch</p>
+<p>Deployment of build artifacts into a temporary development environment that will occur when a merge request is created (from a feature branch to the primary release branch), and for any subsequent changes to the merging feature branch
+* Deploy or Update MR#-DEV Environment
+* Validate MR#-DEV Environment Configuration
+* Run User Acceptance Tests (UAT)
+* Run Runtime Vulnerability Scans
+* Run Performance Tests (Limited)
+* Mark Merge Request Ready for Peer Review and Merging</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p>Deploy or Update MR#-DEV Environment</p>
-</li>
-<li>
-<p>Validate MR#-DEV Environment Configuration</p>
-</li>
-<li>
-<p>Run User Acceptance Tests (UAT)</p>
-</li>
-<li>
-<p>Run Runtime Vulnerability Scans</p>
-</li>
-<li>
-<p>Run Performance Tests (Limited)</p>
-</li>
-<li>
-<p>Mark Merge Request Ready for Peer Review and Merging</p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Detect Change</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Allows pipeline to detect and respond to a defined set of changes in source code repository</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p><a href="#detailed-component-detect-changed-merge-request">Detect new, changed, or merged,  Merge Request to Release Branch</a></p>
-</li>
-</ul>
-</div></div></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Allows pipeline to detect and respond to a defined set of changes in source code repository
+* <a href="#detailed-component-detect-changed-merge-request">Detect new, changed, or merged,  Merge Request to Release Branch</a></p>
+</div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>CI/CD</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Build artifacts are created and tested automatically on a continual basis . Provide developer with ability to make code changes with instant (realtime) deployment of those changes into live development runtime environment. An ability to bypass pipeline to reduce friction during development on feature branches.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p>Generate Metadata</p>
-</li>
-<li>
-<p>Tag Source Code with Metadata</p>
-</li>
-<li>
-<p>Run Unit Tests</p>
-</li>
-<li>
-<p>Package Application</p>
-</li>
-<li>
-<p>Static Code Analysis</p>
-</li>
-<li>
-<p>Push Packaged Application to Repository with Metadata</p>
-</li>
-<li>
-<p>Create Container Image</p>
-</li>
-<li>
-<p>Push Container Image to Repository with Metadata</p>
-</li>
-<li>
-<p>Run Container Image Unit Tests</p>
-</li>
-<li>
-<p>Run Static Compliance Container Image Scan</p>
-</li>
-<li>
-<p>Run Static Vulnerability Container Image Scan</p>
-</li>
-<li>
-<p>Push Trusted Container Image to Repository with Metadata</p>
-</li>
-<li>
-<p>Deploy or Update TEST Environment</p>
-</li>
-<li>
-<p>Validate TEST Environment Configuration</p>
-</li>
-<li>
-<p>Run User Acceptance Tests (UAT)</p>
-</li>
-<li>
-<p>Run Runtime Vulnerability Scans</p>
-</li>
-<li>
-<p>Run Performance Tests (Full)</p>
-</li>
-<li>
-<p>Deploy or Update PROD Environment</p>
-</li>
-<li>
-<p>Validate PROD Environment Configuration</p>
-</li>
-<li>
-<p>Run Canary Testing</p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Peer Review</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>To collaborate with others in the process of reviewing code in order to make sure it works, and in order to improve it where possible</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p>Mark Merge Request as Work In Progress (WIP)</p>
-</li>
-<li>
-<p>Peer Review</p>
-</li>
-<li>
-<p>Merge to Release Branch</p>
-</li>
-<li>
-<p>Delete MR#-DEV Deployment Environment</p>
-</li>
-</ul>
+<p>Build artifacts are created and tested automatically on a continual basis . Provide developer with ability to make code changes with instant (realtime) deployment of those changes into live development runtime environment. An ability to bypass pipeline to reduce friction during development on feature branches.
+* Generate Metadata
+* Tag Source Code with Metadata
+* Run Unit Tests
+* Package Application
+* Static Code Analysis
+* Push Packaged Application to Repository with Metadata
+* Create Container Image
+* Push Container Image to Repository with Metadata
+* Run Container Image Unit Tests
+* Run Static Compliance Container Image Scan
+* Run Static Vulnerability Container Image Scan
+* Push Trusted Container Image to Repository with Metadata
+* Deploy or Update TEST Environment
+* Validate TEST Environment Configuration
+* Run User Acceptance Tests (UAT)
+* Run Runtime Vulnerability Scans
+* Run Performance Tests (Full)
+* Deploy or Update PROD Environment
+* Validate PROD Environment Configuration
+* Run Canary Testing</p>
 </div></div></td>
 </tr>
 <tr>
@@ -742,13 +629,21 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Retrospective</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Peer Review</p>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>To collaborate with others in the process of reviewing code in order to make sure it works, and in order to improve it where possible
+* Mark Merge Request as Work In Progress (WIP)
+* Peer Review
+* Merge to Release Branch
+* Delete MR#-DEV Deployment Environment</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Release</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 </tbody>
@@ -2545,7 +2440,7 @@ Library for Jenkins that defines domain specific language for the implementation
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-03-02 00:33:30 UTC
+Last updated 2021-03-03 18:27:20 UTC
 </div>
 </div>
 </body>

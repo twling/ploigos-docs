@@ -478,6 +478,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_installing_the_ploigos_software_factory_operator">1.8.2. Installing the Ploigos Software Factory Operator</a></li>
 <li><a href="#_deploy_the_ploigos_platform_and_pipeline">1.8.3. Deploy the Ploigos Platform and Pipeline</a></li>
 <li><a href="#_add_ssh_key_to_gitea">1.8.4. Add SSH Key to Gitea</a></li>
+<li><a href="#_setup_the_development_environment_with_reference_application">1.8.5. Setup the Development Environment with reference application</a></li>
+<li><a href="#_changing_from_the_ploigos_cicd_standard_workflow_to_the_ploigos_cicd_minimum_workflow">1.8.6. Changing from the Ploigos CI/CD Standard Workflow to the Ploigos CI/CD Minimum Workflow</a></li>
 </ul>
 </li>
 <li><a href="#ploigos-workflow-reference-ops">1.9. Operating the Reference Implementation</a></li>
@@ -1878,6 +1880,9 @@ The detailed CI/CD Process Workflow section provides more details on this predef
 </div>
 <div class="sect2">
 <h3 id="ploigos-reference-impl"><a class="anchor" href="#ploigos-reference-impl"></a><a class="link" href="#ploigos-reference-impl">1.8. Reference Implementation</a></h3>
+<div class="paragraph">
+<p>The following guide shows how to deploy the reference implementation of the Ploigos Standard Workflow into an OCP 4.x cluster with a simple quarkus application as a demo.</p>
+</div>
 <div class="sect3">
 <h4 id="_prerequisites"><a class="anchor" href="#_prerequisites"></a><a class="link" href="#_prerequisites">1.8.1. Prerequisites</a></h4>
 <div class="ulist">
@@ -2038,8 +2043,232 @@ EOF</pre>
 <li>
 <p>In the <strong>devsecops</strong> namespace, navigate to <strong>Secrets</strong></p>
 </li>
+<li>
+<p>From the secret <strong>tssc-service-account</strong>, copy the username and password</p>
+</li>
+<li>
+<p>Navigate to <strong>Routes</strong> and open the Gitea route</p>
+</li>
 </ul>
 </div>
+</li>
+<li>
+<p>Login to Gitea with the tssc-service-account username/password</p>
+</li>
+<li>
+<p>Add SSH Key to account in Gitea</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Click the Profile Icon (top left corner)</p>
+</li>
+<li>
+<p>Select Settings</p>
+</li>
+<li>
+<p>Select 'Add Key'</p>
+</li>
+<li>
+<p>Enter a public key</p>
+</li>
+<li>
+<p>Click 'Add Key'</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_setup_the_development_environment_with_reference_application"><a class="anchor" href="#_setup_the_development_environment_with_reference_application"></a><a class="link" href="#_setup_the_development_environment_with_reference_application">1.8.5. Setup the Development Environment with reference application</a></h4>
+<div class="paragraph">
+<p>The following directions are designed to setup a development environment for Ploigos. By creating forks of the official repositories, a developer can customize the workflow as needed.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Fork required Ploigos repositories</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Create a fork of: <a href="https://github.com/ploigos/ploigos-step-runner" class="bare">https://github.com/ploigos/ploigos-step-runner</a></p>
+</li>
+<li>
+<p>Create a fork of: <a href="https://github.com/ploigos/ploigos-jenkins-library" class="bare">https://github.com/ploigos/ploigos-jenkins-library</a></p>
+</li>
+<li>
+<p>Clone repositories above to local machine</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Configure the Jenkinsfile to point to the <strong>ploigos-step-runner</strong> fork</p>
+<div class="ulist">
+<ul>
+<li>
+<p>In Gitea, navigate to the quarkus reference application Jenkinsfile <code>cicd/Jenkinsfile</code></p>
+</li>
+<li>
+<p>Add the following to the end of the Jenkinsfile:</p>
+<div class="literalblock">
+<div class="content">
+<pre>stepRunnerUpdateLibrary: true,
+stepRunnerLibSourceUrl: "git+​ https://github.com/[your-step-runner-fork]@[the-branch-to-use​ ]"</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Replace [your-step-runner-fork] with your fork URL</p>
+</li>
+<li>
+<p>Replace [the-branch-to-use] with target branch</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Commit Changes</p>
+</li>
+<li>
+<p>Initiate Pull Request</p>
+</li>
+<li>
+<p>Upon successful Pull Request build, Merge changes into main branch of the reference-quarkus-mvn-jenkins repository</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Configure the Jenkinsfile to point to the <strong>ploigos-jenkins-library</strong> fork</p>
+<div class="ulist">
+<ul>
+<li>
+<p>In Gitea, navigate to the quarkus reference application Jenkinsfile <code>cicd/Jenkinsfile</code></p>
+</li>
+<li>
+<p>Replace the <strong>remote:</strong> line of the Jenkinsfile with the forked jenkins library URL</p>
+<div class="literalblock">
+<div class="content">
+<pre>// Load the TSSC Jenkins Library
+library identifier: 'ploigos-jenkins-library@main',
+retriever: modernSCM([
+  $class: 'GitSCMSource',
+  remote: 'https://github.com/&lt;username&gt;/ploigos-jenkins-library.git'
+])</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>NOTE: also update the <strong>library identifier:</strong> line with the branch name if it differs from <code>main</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Commit Changes</p>
+</li>
+<li>
+<p>Initiate Pull Request</p>
+</li>
+<li>
+<p>Upon successful Pull Request build, Merge changes into main branch of the reference-quarkus-mvn-jenkins repository</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_changing_from_the_ploigos_cicd_standard_workflow_to_the_ploigos_cicd_minimum_workflow"><a class="anchor" href="#_changing_from_the_ploigos_cicd_standard_workflow_to_the_ploigos_cicd_minimum_workflow"></a><a class="link" href="#_changing_from_the_ploigos_cicd_standard_workflow_to_the_ploigos_cicd_minimum_workflow">1.8.6. Changing from the Ploigos CI/CD Standard Workflow to the Ploigos CI/CD Minimum Workflow</a></h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In Gitea, navigate to the quarkus reference application Jenkinsfile <code>cicd/Jenkinsfile</code>:</p>
+<div class="literalblock">
+<div class="content">
+<pre>// Load the Ploigos Jenkins Library
+library identifier: 'ploigos-jenkins-library@v0.17.0',
+retriever: modernSCM([
+    $class: 'GitSCMSource',
+    remote: 'https://github.com/ploigos/ploigos-jenkins-library.git'
+])</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>// run the pipeline
+ploigosWorkflowStandard(
+    stepRunnerConfigDir: 'cicd/ploigos-step-runner-config/',
+    pgpKeysSecretName: 'pgp-keys-ploigos-workflow-ref-quarkus-mvn-jenkins-std-fruit',</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>workflowServiceAccountName: 'ploigos-workflow-ref-quarkus-mvn-jenkins-std-fruit',</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    workflowWorkerImageDefault: 'ploigos/ploigos-ci-agent-jenkins:v0.16.0',
+    workflowWorkerImageUnitTest: 'ploigos/ploigos-tool-maven:v0.16.0',
+    workflowWorkerImagePackage: 'ploigos/ploigos-tool-maven:v0.16.0',
+    workflowWorkerImageStaticCodeAnalysis: 'ploigos/ploigos-tool-sonar:v0.16.0',
+    workflowWorkerImagePushArtifacts: 'ploigos/ploigos-tool-maven:v0.16.0',
+    workflowWorkerImageContainerOperations: 'ploigos/ploigos-tool-containers:v0.16.0',
+    workflowWorkerImageContainerImageStaticComplianceScan: 'ploigos/ploigos-tool-openscap:v0.16.0',
+    workflowWorkerImageContainerImageStaticVulnerabilityScan: 'ploigos/ploigos-tool-openscap:v0.16.0',
+    workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:v0.16.0',
+    workflowWorkerImageValidateEnvironmentConfiguration: 'ploigos/ploigos-tool-config-lint:v0.16.0',
+    workflowWorkerImageUAT: 'ploigos/ploigos-tool-maven:v0.16.0'
+)</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Rename the function <code>ploigosWorkflowStandard</code> to <code>ploigosWorkflowMinimal</code> and Remove <strong>workflowWorker</strong> Lines to conform to the Ploigos Minimal Workflow:</p>
+<div class="literalblock">
+<div class="content">
+<pre>// Load the Ploigos Jenkins Library
+library identifier: 'ploigos-jenkins-library@v0.17.0',
+retriever: modernSCM([
+    $class: 'GitSCMSource',
+    remote: 'https://github.com/ploigos/ploigos-jenkins-library.git'
+])</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>// run the pipeline
+ploigosWorkflowMinimal(
+    stepRunnerConfigDir: 'cicd/ploigos-step-runner-config/',
+    pgpKeysSecretName: 'pgp-keys-ploigos-workflow-ref-quarkus-mvn-jenkins-std-fruit',</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    workflowServiceAccountName: 'ploigos-workflow-ref-quarkus-mvn-jenkins-std-fruit',
+    workflowWorkerImageDefault: 'ploigos/ploigos-ci-agent-jenkins:v0.16.0',
+    workflowWorkerImagePackage: 'ploigos/ploigos-tool-maven:v0.16.0',
+    workflowWorkerImagePushArtifacts: 'ploigos/ploigos-tool-maven:v0.16.0',
+    workflowWorkerImageContainerOperations: 'ploigos/ploigos-tool-containers:v0.16.0',
+    workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:v0.16.0',
+)</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Commit Changes</p>
+</li>
+<li>
+<p>Initiate Pull Request</p>
+</li>
+<li>
+<p>Upon successful Pull Request build, Merge changes into main branch of the reference-quarkus-mvn-jenkins repository</p>
 </li>
 </ol>
 </div>
@@ -2343,7 +2572,7 @@ Library for Jenkins that defines domain specific language for the implementation
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-03-12 02:24:33 UTC
+Last updated 2021-03-13 04:55:22 UTC
 </div>
 </div>
 </body>
